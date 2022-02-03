@@ -29,9 +29,10 @@ props로 저장된 태그 목록`savedTags`를 받습니다. 미리 저장된 �
 `useState`를 통해 저장된 단어`words`와 입력값과 일치하는 단어`matchWords`를 체크합니다  
 `useRef`를 통해 input값을 받습니다. input값이 변화할 때마다 `words`를 참조하여 일치하는 단어 `matchWords`를 갱신합니다. 이후 갱신된 `matchWords`가 `map`함수를 통해 렌더링됩니다.  
 렌더링된 `matchWords`를 클릭하면 input값은 해당하는 단어로 바뀝니다.  
+  -> 포커스되었을 때, `matchWords`를 나타내기 위해서 `:focus-within`을 사용했습니다.  
 enter로 입력값을 제출하면 단어가 `words`에 추가됩니다. reset() 함수를 통해 input값을 초기화합니다.  
 props로 저장된 단어 목록`savedWords`를 받습니다.  
 6. Click To Edit    
 `useState`를 통해 포커싱 대상을 체크합니다. 포커싱 대상과 input이 일치하지 않으면 `disabled`속성을 추가합니다   
-props로 컴포넌트 이름`stateName`, 입력값`inputRef`, 제출 로직`onSubmit`을 받습니다  
-해당 컴포넌트를 사용하는 페이지에서는 관리하는 상태값에 따라 분류하여 처리합니다.
+props로 컴포넌트 이름`stateName`, 입력값`inputRef`, 제출 로직`onSubmit`을 받습니다.  
+해당 컴포넌트를 사용하는 페이지에서는 관리하는 상태값에 따라 분류하여 처리합니다.  
