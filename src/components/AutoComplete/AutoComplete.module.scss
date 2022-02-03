@@ -1,0 +1,69 @@
+.autoCompleteContainer {
+  form {
+    .inputBox {
+      display: grid;
+      grid-template-columns: auto 20px;
+      border: 1px solid #999;
+      border-radius: 5px;
+      box-sizing: border-box;
+      overflow: hidden;
+      padding: 5px;
+      height: 30px;
+
+      input {
+        outline: none;
+        border: none;
+      }
+
+      .resetButton {
+        display: none;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        padding: 0;
+
+        &:hover {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .wordBox {
+      display: none;
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    &:focus-within {
+      .inputBox {
+        border-radius: 5px 5px 0 0;
+
+        .resetButton {
+          display: block;
+          background: none;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      .wordBox {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 5px 0;
+        border: 1px solid #999;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        box-sizing: border-box;
+
+        button:hover {
+          background: #ddd;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.tabContainer {
+  width: 100vw;
+
+  .buttonBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    background: #ddd;
+    padding: 0 10px;
+
+    .tabButton {
+      background: none;
+      border: none;
+      padding: 5px 10px;
+      color: #777;
+      text-align: left;
+      cursor: pointer;
+
+      &.selected {
+        background: $color;
+        color: #fff;
+      }
+    }
+  }
+
+  .tabContent {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

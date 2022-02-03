@@ -1,0 +1,48 @@
+.tagContainer {
+  .tagBox {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    overflow: hidden;
+    padding: 10px;
+
+    &:focus-within {
+      border-color: $color;
+    }
+
+    .tagContent {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 30px;
+      background: $color;
+      color: #fff;
+      padding: 0 5px;
+      border-radius: 5px;
+
+      button {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        border: none;
+        border-radius: 50%;
+        background: #fff;
+        color: $color;
+        padding: 0;
+        cursor: pointer;
+      }
+    }
+
+    form {
+      input {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
